@@ -38,4 +38,9 @@ public class ProductoController {
         producto1.setPreciounitario(producto.getPreciounitario());
         return productoService.editarProducto(producto1);
     }
+
+    @DeleteMapping("/productos/remove/{id}")
+    public Response eliminarProductos(@PathVariable String id){
+        return productoService.removeProducto(id);
+    }
 }
