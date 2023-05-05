@@ -1,0 +1,14 @@
+com\api\model\Trabajador.class
+com\api\controllers\ProductoController.class
+com\api\ApiIngApplication.class
+com\api\services\TrabajadorService.class
+com\api\repositories\TrabajadorRepository.class
+com\api\model\Producto.class
+com\api\services\ProductoService.class
+com\api\services\UsuarioService.class
+com\api\controllers\TrabajadorController.class
+com\api\repositories\ProductoRepository.class
+com\api\controllers\UsuarioController.class
+com\api\model\Response.class
+com\api\repositories\UsuarioRepository.class
+com\api\model\Usuario.class
