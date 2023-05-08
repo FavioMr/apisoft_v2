@@ -24,6 +24,14 @@ public class Entrada {
 
     public Entrada() {
     }
+    
+    public void getFechaMod(String fechaMod){
+        this.fechaMod = fechaMod;
+    }
+    
+    public String getFechaMod(){
+        return fechaMod;
+    }
 
     public void getFechaMod(String fechaMod){
         this.fechaMod = fechaMod;
