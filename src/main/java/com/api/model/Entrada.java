@@ -33,14 +33,6 @@ public class Entrada {
         return fechaMod;
     }
 
-    public void getFechaMod(String fechaMod){
-        this.fechaMod = fechaMod;
-    }
-
-    public String getFechaMod(){
-        return fechaMod;
-    }
-
     public String getId() {
         return id;
     }
