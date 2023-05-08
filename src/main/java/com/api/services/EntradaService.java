@@ -26,4 +26,8 @@ public class EntradaService {
     public List<Entrada> listarEntradas(){
         return entradaRepository.findAll(Sort.by(Sort.Direction.DESC,"fechaMod"));
     }
+
+    public List<Entrada> filterByFechaMod(String fechaMod){
+        return entradaRepository.findAllByFechaMod(fechaMod);
+    }
 }
