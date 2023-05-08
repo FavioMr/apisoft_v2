@@ -25,7 +25,7 @@ public class Entrada {
     public Entrada() {
     }
     
-    public void getFechaMod(String fechaMod){
+    public void setFechaMod(String fechaMod){
         this.fechaMod = fechaMod;
     }
     
