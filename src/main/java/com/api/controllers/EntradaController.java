@@ -26,7 +26,7 @@ public class EntradaController {
         return entradaService.listarEntradas();
     }
 
-    @GetMapping("{fechaMod}")
+    @GetMapping("/filter/{fechaMod}")
     public List<Entrada> getFilterData(@PathVariable String fechaMod){
         return entradaService.filterByFechaMod(fechaMod);
     }
