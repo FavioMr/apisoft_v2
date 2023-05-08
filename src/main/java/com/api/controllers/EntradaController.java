@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/entrada/")
-@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST})
+@CrossOrigin(origins = "*", methods = {RequestMethod    .GET, RequestMethod.POST})
 public class EntradaController {
 
     @Autowired

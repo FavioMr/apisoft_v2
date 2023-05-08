@@ -12,6 +12,7 @@ public class Entrada {
     private String accion;
     private String usuarioActual;
     private String hora;
+    private String fechaMod;
 
     private String codigo;
     private String nombre;
@@ -22,6 +23,14 @@ public class Entrada {
     private String fechaingreso;
 
     public Entrada() {
+    }
+
+    public void getFechaMod(String fechaMod){
+        this.fechaMod = fechaMod;
+    }
+
+    public String getFechaMod(){
+        return fechaMod;
     }
 
     public String getId() {
