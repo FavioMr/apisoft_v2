@@ -4,6 +4,7 @@ import com.api.model.Producto;
 import com.api.model.Response;
 import com.api.repositories.ProductoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
@@ -15,12 +16,17 @@ public class ProductoService {
     @Autowired
     private ProductoRepository productoRepository;
 
-    public Producto createProducto(Producto producto) {
-        return productoRepository.save(producto);
+    public Response createProducto(Producto producto) {
+        try {
+            productoRepository.save(producto);
+            return new Response(true, "Correcto");
+        }catch (Exception e){
+            return new Response(false,"Error al crear producto");
+        }
     }
 
     public List<Producto> getProductos() {
-        return productoRepository.findAll();
+        return productoRepository.findAll(Sort.by(Sort.Direction.ASC,"codigo"));
     }
 
     public Response editarProducto(Producto producto) {
@@ -29,6 +35,10 @@ public class ProductoService {
 
     public Producto getOneProductoId(String id) {
         return productoRepository.getById(id);
+    }
+
+    public Producto getOneProductoCOdigo(String codigo){
+        return productoRepository.findBycodigo(codigo);
     }
 
     public Response removeProducto(String id) {

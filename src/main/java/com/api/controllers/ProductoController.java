@@ -16,7 +16,7 @@ public class ProductoController {
     private ProductoService productoService;
 
     @PostMapping("/productos/")
-    public Producto enviarProducto(@RequestBody Producto producto) {
+    public Response enviarProducto(@RequestBody Producto producto) {
         return productoService.createProducto(producto);
     }
 
@@ -42,5 +42,10 @@ public class ProductoController {
     @DeleteMapping("/productos/remove/{id}")
     public Response eliminarProductos(@PathVariable String id){
         return productoService.removeProducto(id);
+    }
+
+    @GetMapping("/productos/bycodigo/{codigo}")
+    public Producto getByCode(@PathVariable String codigo){
+        return productoService.getOneProductoCOdigo(codigo);
     }
 }
