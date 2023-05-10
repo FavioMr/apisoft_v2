@@ -20,6 +20,11 @@ public class ProductoController {
         return productoService.createProducto(producto);
     }
 
+    @PostMapping("/productos/excel/")
+    public Response enviarExcel(@RequestBody List<Producto> listaproducto){
+        return productoService.sendDataExcel(listaproducto);
+    }
+
     @GetMapping("/productos/")
     public List<Producto> obtenerProducto() {
         return productoService.getProductos();

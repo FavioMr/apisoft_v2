@@ -50,4 +50,15 @@ public class ProductoService {
         }
         return response;
     }
+
+    public Response sendDataExcel(List<Producto> listaProducto){
+        try{
+            for (Producto p:listaProducto) {
+                productoRepository.save(p);
+            }
+            return new Response(true, "Cargado completado");
+        }catch (Exception e){
+            return new Response(false, "Error al cargar datos");
+        }
+    }
 }
