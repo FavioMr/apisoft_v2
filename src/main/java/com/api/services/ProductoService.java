@@ -53,8 +53,9 @@ public class ProductoService {
 
     public Response sendDataExcel(List<Producto> listaProducto){
         try{
+            boolean n;
             for (Producto p:listaProducto) {
-                productoRepository.save(p);
+               createProducto(p);
             }
             return new Response(true, "Cargado completado");
         }catch (Exception e){
