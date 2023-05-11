@@ -20,12 +20,12 @@ public class CargoService {
             cargoRepository.save(cargo);
             return new Response(true,"Correcto, cargo creado correctamente");
         }catch (Exception e){
-            return new Response(false,"Error al guardar cargo");
+            return new Response(false,"Error al guardar cargo: "+e.getMessage());
         }
     }
 
-    public Cargo leerCargos(Integer idcargo){
-        return cargoRepository.findByidcargo(idcargo);
+    public Cargo leerCargos(Integer id){
+        return cargoRepository.findByid(id);
     }
 
     public List<Cargo> getAll(){

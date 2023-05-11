@@ -8,33 +8,33 @@ public class Cargo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer idcargo;
-    private String nombreCargo;
+    private Integer id;
+    private String nombrecargo;
 
     public Cargo() {
     }
 
-    public int getIdcargo() {
-        return idcargo;
+    public Integer getId() {
+        return id;
     }
 
-    public void setIdcargo(int idcargo) {
-        this.idcargo = idcargo;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getNombreCargo() {
-        return nombreCargo;
+    public String getNombrecargo() {
+        return nombrecargo;
     }
 
-    public void setNombreCargo(String nombreCargo) {
-        this.nombreCargo = nombreCargo;
+    public void setNombrecargo(String nombrecargo) {
+        this.nombrecargo = nombrecargo;
     }
 
     @Override
     public String toString() {
         return "Cargo{" +
-                "idcargo=" + idcargo +
-                ", nombreCargo='" + nombreCargo + '\'' +
+                "id=" + id +
+                ", nombrecargo='" + nombrecargo + '\'' +
                 '}';
     }
 }
