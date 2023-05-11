@@ -7,6 +7,8 @@ import com.api.services.ProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST})
 @RequestMapping("/cargo/")
@@ -25,4 +27,8 @@ public class CargoController {
         return cargoService.leerCargos(idcargo);
     }
 
+    @GetMapping()
+    public List<Cargo> obtenerTodo(){
+        return cargoService.getAll();
+    }
 }

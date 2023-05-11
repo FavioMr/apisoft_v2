@@ -6,6 +6,7 @@ import com.api.repositories.CargoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -25,5 +26,9 @@ public class CargoService {
 
     public Cargo leerCargos(Integer idcargo){
         return cargoRepository.findByidcargo(idcargo);
+    }
+
+    public List<Cargo> getAll(){
+        return cargoRepository.findAll();
     }
 }
