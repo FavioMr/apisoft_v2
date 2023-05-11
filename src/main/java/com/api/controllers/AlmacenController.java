@@ -6,6 +6,8 @@ import com.api.services.AlmacenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST})
 @RequestMapping("/almacen/")
@@ -22,6 +24,11 @@ public class AlmacenController {
     @GetMapping("/{id}")
     public Almacen getAlmacen(@PathVariable Integer id){
         return almacenService.getOneAlmacen(id);
+    }
+
+    @GetMapping()
+    public List<Almacen> getAllAlmacen(){
+        return almacenService.getAll();
     }
 
 }

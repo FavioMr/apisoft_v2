@@ -6,6 +6,8 @@ import com.api.repositories.AlmacenRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class AlmacenService {
 
@@ -23,5 +25,9 @@ public class AlmacenService {
         } catch (Exception e) {
             return new Response(false, "Error al guardar un almacén");
         }
+    }
+
+    public List<Almacen> getAll(){
+        return almacenRepository.findAll();
     }
 }
