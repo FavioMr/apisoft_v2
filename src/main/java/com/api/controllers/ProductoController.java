@@ -22,6 +22,7 @@ public class ProductoController {
 
     @PostMapping("/productos/excel/")
     public Response enviarExcel(@RequestBody List<Producto> listaproducto){
+        System.out.println(listaproducto);
         return productoService.sendDataExcel(listaproducto);
     }
 

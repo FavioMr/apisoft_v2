@@ -3,6 +3,7 @@ D:\IdeaProyects\apiIng\src\main\java\com\api\controllers\TrabajadorController.ja
 D:\IdeaProyects\apiIng\src\main\java\com\api\repositories\ProductoRepository.java
 D:\IdeaProyects\apiIng\src\main\java\com\api\controllers\EntradaController.java
 D:\IdeaProyects\apiIng\src\main\java\com\api\model\Producto.java
+D:\IdeaProyects\apiIng\src\main\java\com\api\controllers\CarreraController.java
 D:\IdeaProyects\apiIng\src\main\java\com\api\services\AlmacenService.java
 D:\IdeaProyects\apiIng\src\main\java\com\api\services\CargoService.java
 D:\IdeaProyects\apiIng\src\main\java\com\api\model\Usuario.java
@@ -10,13 +11,16 @@ D:\IdeaProyects\apiIng\src\main\java\com\api\model\Cargo.java
 D:\IdeaProyects\apiIng\src\main\java\com\api\services\UsuarioService.java
 D:\IdeaProyects\apiIng\src\main\java\com\api\repositories\AlmacenRepository.java
 D:\IdeaProyects\apiIng\src\main\java\com\api\controllers\ProductoController.java
+D:\IdeaProyects\apiIng\src\main\java\com\api\services\CarreraService.java
 D:\IdeaProyects\apiIng\src\main\java\com\api\controllers\CargoController.java
 D:\IdeaProyects\apiIng\src\main\java\com\api\model\Almacen.java
 D:\IdeaProyects\apiIng\src\main\java\com\api\services\ProductoService.java
+D:\IdeaProyects\apiIng\src\main\java\com\api\model\Carrera.java
 D:\IdeaProyects\apiIng\src\main\java\com\api\model\Response.java
 D:\IdeaProyects\apiIng\src\main\java\com\api\repositories\UsuarioRepository.java
 D:\IdeaProyects\apiIng\src\main\java\com\api\ApiIngApplication.java
 D:\IdeaProyects\apiIng\src\main\java\com\api\model\Trabajador.java
+D:\IdeaProyects\apiIng\src\main\java\com\api\repositories\CarreraRepository.java
 D:\IdeaProyects\apiIng\src\main\java\com\api\repositories\EntradaRepository.java
 D:\IdeaProyects\apiIng\src\main\java\com\api\repositories\CargoRepository.java
 D:\IdeaProyects\apiIng\src\main\java\com\api\controllers\UsuarioController.java

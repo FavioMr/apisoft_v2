@@ -3,7 +3,7 @@ package com.api.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="trabajador")
+@Table(name = "trabajador")
 public class Trabajador {
 
     @Id
@@ -13,6 +13,9 @@ public class Trabajador {
     private String apellidopa;
     private String apellidoma;
     private Integer idcargo;
+    private String ntelefono;
+    private String dni;
+    private Integer idcarrera;
 
     public Trabajador() {
     }
@@ -57,14 +60,32 @@ public class Trabajador {
         this.idcargo = idcargo;
     }
 
+    public String getNtelefono() {
+        return ntelefono;
+    }
+
+    public void setNtelefono(String ntelefono) {
+        this.ntelefono = ntelefono;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
+    public Integer getIdcarrera() {
+        return idcarrera;
+    }
+
+    public void setIdcarrera(Integer idcarrera) {
+        this.idcarrera = idcarrera;
+    }
+
     @Override
     public String toString() {
-        return "Trabajador{" +
-                "id='" + id + '\'' +
-                ", nombre='" + nombre + '\'' +
-                ", apellidopa='" + apellidopa + '\'' +
-                ", apellidoma='" + apellidoma + '\'' +
-                ", idcargo=" + idcargo +
-                '}';
+        return "Trabajador{" + "id='" + id + '\'' + ", nombre='" + nombre + '\'' + ", apellidopa='" + apellidopa + '\'' + ", apellidoma='" + apellidoma + '\'' + ", idcargo=" + idcargo + ", ntelefono=" + ntelefono + ", dni=" + dni + ", idcarrera=" + idcarrera + '}';
     }
 }
