@@ -24,7 +24,22 @@ public class Entrada {
 
     public Entrada() {
     }
-    
+
+    public Entrada(String id, String accion, String usuarioActual, String hora, String fechaMod, String codigo, String nombre, Integer cantidadmin, Integer cantidadact, Integer almacen, Double preciounitario, String fechaingreso) {
+        this.id = id;
+        this.accion = accion;
+        this.usuarioActual = usuarioActual;
+        this.hora = hora;
+        this.fechaMod = fechaMod;
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.cantidadmin = cantidadmin;
+        this.cantidadact = cantidadact;
+        this.almacen = almacen;
+        this.preciounitario = preciounitario;
+        this.fechaingreso = fechaingreso;
+    }
+
     public void setFechaMod(String fechaMod){
         this.fechaMod = fechaMod;
     }

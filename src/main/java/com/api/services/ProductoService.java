@@ -1,5 +1,7 @@
 package com.api.services;
 
+import com.api.model.Entrada;
+import com.api.model.EntradaImportado;
 import com.api.model.Producto;
 import com.api.model.Response;
 import com.api.repositories.ProductoRepository;
@@ -15,6 +17,8 @@ public class ProductoService {
 
     @Autowired
     private ProductoRepository productoRepository;
+    @Autowired
+    private EntradaService entradaService;
 
     public Response createProducto(Producto producto) {
         try {
@@ -51,11 +55,12 @@ public class ProductoService {
         return response;
     }
 
-    public Response sendDataExcel(List<Producto> listaProducto){
+    public Response sendDataExcel(EntradaImportado entradaImp){
         try{
             boolean n;
-            for (Producto p:listaProducto) {
+            for ( Producto p : entradaImp.getListaProd()) {
                createProducto(p);
+               entradaService.crearEntrada(new Entrada("","Importado",entradaImp.getUsuarioActual(),entradaImp.getHora(), entradaImp.getFechaMod(), p.getCodigo(),p.getNombre(),p.getCantidadmin(), p.getCantidadact(), p.getAlmacen(),p.getPreciounitario(),p.getFechaingreso()));
             }
             return new Response(true, "Cargado completado");
         }catch (Exception e){

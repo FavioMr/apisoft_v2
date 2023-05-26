@@ -1,5 +1,6 @@
 package com.api.controllers;
 
+import com.api.model.EntradaImportado;
 import com.api.model.Producto;
 import com.api.model.Response;
 import com.api.services.ProductoService;
@@ -21,9 +22,9 @@ public class ProductoController {
     }
 
     @PostMapping("/productos/excel/")
-    public Response enviarExcel(@RequestBody List<Producto> listaproducto){
-        System.out.println(listaproducto);
-        return productoService.sendDataExcel(listaproducto);
+    public Response enviarExcel(@RequestBody EntradaImportado entradaImportado){
+        System.out.println(entradaImportado);
+        return productoService.sendDataExcel(entradaImportado);
     }
 
     @GetMapping("/productos/")
