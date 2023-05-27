@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.DELETE})
+@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.DELETE, RequestMethod.PUT})
 @RequestMapping("/trabajador/")
 public class TrabajadorController {
 
@@ -27,18 +27,23 @@ public class TrabajadorController {
     }
 
     @PostMapping("/editar/{id}")
-    public Response editarTrabajador(@PathVariable String id, @RequestBody Trabajador trabajador) {
+    public Trabajador editarTrabajador(@PathVariable String id,@RequestBody Trabajador trabajador) {
         Trabajador t = trabajadorService.getOneTrabajador(id);
         t.setId(id);
         t.setNombre(trabajador.getNombre());
         t.setApellidopa(trabajador.getApellidopa());
         t.setApellidoma(trabajador.getApellidoma());
         t.setIdcargo(trabajador.getIdcargo());
+        t.setDni(trabajador.getDni());
+        t.setIdcarrera(trabajador.getIdcarrera());
+        t.setNtelefono(trabajador.getNtelefono());
+
         return trabajadorService.editarTrabajador(t);
     }
 
     @GetMapping()
     public List<Trabajador> getAllTrabajador() {
+        System.out.println(trabajadorService.getTrabajadores());
         return trabajadorService.getTrabajadores();
     }
 

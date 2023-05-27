@@ -23,8 +23,8 @@ public class TrabajadorService {
         return trabajadorRepository.findAll();
     }
 
-    public Response editarTrabajador(Trabajador trabajador) {
-        return trabajadorRepository.save(trabajador) != null ? new Response(true, "Editado de manera correcta: " + trabajador.toString()) : new Response(false, "Error al editar: " + trabajador.toString());
+    public Trabajador editarTrabajador(Trabajador trabajador) {
+        return trabajadorRepository.save(trabajador);
     }
 
     public Trabajador getOneTrabajador(String id) {
